@@ -28,8 +28,8 @@ disease_list = list(disease_dic.keys())
 print(disease_list)
 
 
-@app.route('/download', methods=['POST'])
-def download():
+@app.route('/analyze', methods=['POST'])
+def analyze():
     data = request.get_json()
     if 'image' not in data:
         return jsonify({'error': 'no image data'}), 400
